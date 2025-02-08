@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- progress barstle -->
+    <link rel="stylesheet" href="css/css-circular-prog-bar.css">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+    <!-- font awesome stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Include Particles.js Library -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <title>Document</title>
+    <style>
+:root {
+    --first-color: hsl(82, 60%, 28%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 95%);
+    --container-color: hsl(0, 0%, 100%);
+    --primary-color: #6366f1;
+    --text-color: #0f172a;
+    --bg-color: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-border: rgba(231, 231, 231, 0.8);
+    --nav-height: 70px;
+    --nav-shadow: 0 5px 20px -5px rgba(99, 102, 241, 0.1);
+    --button-bg: rgba(99, 102, 241, 0.1);
+    --button-hover: rgba(99, 102, 241, 0.15);
+
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: .813rem;
+}
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+[data-theme="dark"] {
+  --primary-color: #818cf8;
+  --text-color: #f1f5f9;
+  --bg-color: #0f172a;
+  --nav-bg: rgba(15, 23, 42, 0.8);
+  --nav-border: rgba(51, 65, 85, 0.8);
+  --nav-shadow: 0 5px 20px -5px rgba(129, 140, 248, 0.15);
+  --button-bg: rgba(129, 140, 248, 0.1);
+  --button-hover: rgba(129, 140, 248, 0.15);
+}
+/* Apply dark mode styles to all sections */
+[data-theme="dark"] body,
+[data-theme="dark"] .hero-section,
+[data-theme="dark"] .content,
+[data-theme="dark"] .about_section,
+[data-theme="dark"] .testimonials,
+[data-theme="dark"] .contact_us_6 {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Fix navigation */
+[data-theme="dark"] .nav-link {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+    background-color: rgba(129, 140, 248, 0.2) !important;
+}.nav-logo-img {
+  height: 60px; /* Adjust logo size */
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-logo-img {
+      height: 30px; /* Reduce logo size on smaller screens */
+  }
+}
+.premium-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  height: var(--nav-height);
+  box-shadow: var(--nav-shadow);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+.hero-section, .content, .about_section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.nav-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  overflow: visible;
+  transition: all 0.3s ease;
+  gap: 10px;
+}
+.nav-logo::before,
+.nav-logo::after {
+  display: none; /* This will completely remove the background box */
+}
+
+.logo-text {
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #d946ef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+.nav-logo:hover {
+  transform: translateY(-2px);
+}
+
+.nav-logo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+      var(--primary-color) 0%, 
+      #d946ef 50%,
+      var(--primary-color) 100%
+  );
+  border-radius: 12px;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--nav-bg);
+  border-radius: 11px;
+  z-index: -1;
+}
+
+.nav-logo:hover::before {
+  opacity: 0.15;
+}
+
+.logo-shine {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: -100%;
+  bottom: -100%;
+  background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      transparent 100%
+  );
+  transform: translateX(-100%) rotate(45deg);
+  animation: none;
+  pointer-events: none;
+}
+
+.nav-logo:hover .logo-shine {
+  animation: shineLogo 1s ease forwards;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link i {
+  font-size: 1.2rem;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  background: var(--button-bg);
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  background: var(--button-bg);
+  color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--button-bg);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s, opacity 0.3s;
+  position: absolute;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.moon-icon {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+[data-theme="dark"] .sun-icon {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+[data-theme="dark"] .moon-icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu {
+  display: none !important;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--button-bg);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shineLogo {
+  0% {
+      transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+      transform: translateX(200%) rotate(45deg);
+  }
+}
+@media (max-width: 1024px) and (max-height: 600px){
+  .logo-text {
+    font-size: 1rem; /* Adjust as needed */
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--nav-bg);
+      padding: 1rem;
+      flex-direction: column;
+      gap: 1rem;
+      border-bottom: 1px solid var(--nav-border);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.3s;
+      top: var(--nav-height);
+      gap: 0.5rem;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--nav-shadow);
+  }
+  .logo-text {
+    font-size: 1rem; /* Adjust as needed */
+  }
+
+  .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+  }
+
+  .mobile-menu {
+      display: flex !important;
+  }
+
+  .nav-container {
+      padding: 0 1rem;
+  }
+
+  .nav-link {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      justify-content: flex-start;
+      gap: 0.75rem;
+  }
+
+  .nav-link.active {
+      background: var(--button-bg);
+      transform: none;
+      box-shadow: none;
+  }
+
+  .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-direction: row;
+  }
+}
+
+@keyframes navItemFade {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    min-height: 150vh;
+    background-attachment: fixed;
+    overflow-y: scroll; /* Ensure scrolling works on all devices */
+}
+
+.single-line {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    white-space: nowrap; /* Prevent wrapping on larger screens */
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.about_section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.about_section .container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.about_section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about_section .about_img-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about_section .about_detail-box {
+    padding: 20px;
+}
+
+.about_section h3 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about_section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about_section .btn_read-more {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.about_section .btn_read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .about_section h3 {
+        font-size: 26px;
+    }
+
+    .about_section p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about_section .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about_section p {
+        font-size: 14px;
+    }
+
+    .single-line {
+        font-size: 14px;
+        white-space: normal; /* Allow text wrapping */
+        word-wrap: break-word;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px) {
+    .about_section h3 {
+        font-size: 22px;
+    }
+
+    .about_section p {
+        font-size: 13px;
+    }
+
+    .about_section .btn_read-more {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about_section h3 {
+        font-size: 20px;
+    }
+
+    .about_section p {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .about_section .btn_read-more {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+}
+.container0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.col0-md-6 {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.mtss-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.mtss-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.mtss-section b {
+    font-size: 18px;
+    color: #007bff;
+}
+.container00 {
+    position: relative; /* Change absolute to relative */
+    width: 300px;
+    height: 300px;
+    margin: 50px auto; /* Adds space and centers */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        
+
+            .circle {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .circle i {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .center {
+    background: linear-gradient(to bottom, #333, #000);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+            /* Gradient Colors */
+            #define { background: linear-gradient(to bottom, #009999, #005555); }  
+            #measure { background: linear-gradient(to bottom, #32CD32, #006400); }  
+            #analyze { background: linear-gradient(to bottom, #FF4500, #8B0000); }  
+            #improve { background: linear-gradient(to bottom, #FFA500, #FF8C00); }  
+            #control { background: linear-gradient(to bottom, #9932CC, #4B0082); }  
+
+            /* Responsive Adjustments */
+            @media (max-width: 600px) {
+    .container00 {
+        width: 280px; /* Increased size */
+        height: 280px;
+        top: 210%;
+    }
+
+    .circle {
+        width: 75px;  /* Increased from 60px */
+        height: 75px;
+        font-size: 12px;
+    }
+
+    .circle i {
+        font-size: 18px; /* Bigger icons */
+    }
+
+    .center {
+        width: 85px;
+        height: 85px;
+        font-size: 13;
+    }
+}
+
+            /* Bigger size for large screens */
+            @media (min-width: 1024px) {
+                .container00 {
+        top: 320%; /* Move higher on medium screens */
+        width: 250px;
+        height: 250px;
+    }
+
+                .circle {
+                    width: 120px;
+                    height: 120px;
+                    font-size: 18px;
+                }
+
+                .circle i {
+                    font-size: 28px;
+                }
+
+                .center {
+                    width: 150px;
+                    height: 150px;
+                    font-size: 20px;
+                }
+            }
+
+            .spacer {
+    display: block; /* Ensures the div is treated as a block-level element */
+    width: 100%; /* Full width of the parent container */
+    height: 200px; /* Adjust the height to control the space */
+    background-color: transparent; /* Keep it transparent or white */
+    margin-top: 20px; /* Optional: add margin to separate it more clearly */
+    clear: both; /* Ensures it doesn't overlap with floated elements */
+}
+.mtss-image {
+        width: 100%;
+        height: auto;
+        max-width: 600px; /* Ensures it doesn’t get too large on big screens */
+        display: block;
+        margin: 15px auto; /* Centers the image */
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="premium-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="logo (1).png" alt="Gautami Logo" class="nav-logo-img">
+                <span class="logo-text">Gautami Vidya Dhamam</span>
+                <div class="logo-shine"></div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">
+                    <i class="ri-home-5-line"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about-us.html" class="nav-link">
+                    <i class="ri-information-line"></i>
+                    <span>About</span>
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <i class="ri-stack-line"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="testimonials.html" class="nav-link">
+                    <i class="ri-chat-quote-line"></i> 
+                    <span>Testimonials</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="ri-mail-line"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="ri-sun-line sun-icon"></i>
+                    <i class="ri-moon-line moon-icon"></i>
+                </button>
+                <button class="mobile-menu" aria-label="Menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+ <section class="about_section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="about_img-container">
+                    <img src="about.png" alt="About Us Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about_detail-box">
+                    <h3>About Our School</h3>
+                    <p>
+                        In the year 2003, Mr. Katamreddy Sivakumar Reddy Garu, laid the foundation of “Gautami Vidya Dhamam <br> School” with a conviction and philosophy to forge
+                         the right essence of education in the changing society <br>while upholding a formidable moral conduct with impeccable attitude in the young minds.
+                         <br><br>
+                         We weaved our VISION to function as a robust organization in providing comprehensive education which <br>focuses on holistic learning, innovative pedagogies,
+                          and help nourish and develop the scholastic and <br> co-scholastic abilities of our students.
+                        <br><br>
+                        The trails of GVD’s MISSION leads towards providing an outstanding mode of instruction that cultivates <br> and prepares our students to forecast and confront
+                         real – life experiences and challenges with logical <br> acumen and drive.</p>
+                         
+                        <p class="single-line">Gautami Vidya Dhamam School’s approach to bring life to its Conviction, Vision and Mission all come under one canopy. </p>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container0">
+        <div class="col0-md-6">
+            <div class="mtss-section">
+                <h3>MTSS Approach (Multi – Tiered System of Supports)</h3>
+                <img src="Picture1.jpg" alt="MTSS Image" class="mtss-image" />
+                <p>
+                    The spectrum of teaching and administrative practices at GVD strive to fine-tune the 
+                    Lean – Six – Sigma technique to strike a chord even between academic and non-academic areas via <br><br>
+                    <b>5 Stages – (DMAIC) Define → Measure → Analyze → Improve → Control.</b>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container00">
+        <div class="center">Lean Six σ</div>
+        <div class="circle" id="define"><i class="fa fa-cog"></i>Define</div>
+        <div class="circle" id="measure"><i class="fa fa-chart-bar"></i>Measure</div>
+        <div class="circle" id="analyze"><i class="fa fa-search"></i>Analyze</div>
+        <div class="circle" id="improve"><i class="fa fa-arrow-up"></i>Improve</div>
+        <div class="circle" id="control"><i class="fa fa-check"></i>Control</div>
+    </div>
+
+
+</section>
+<script>
+   
+   document.addEventListener("DOMContentLoaded", function () {
+    // ===========================
+    // Active Navigation Highlighting
+    // ===========================
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        link.classList.remove("active"); // Remove existing active class
+        if (currentPage === link.getAttribute("href")) {
+            link.classList.add("active"); // Add active class to the matching link
+        }
+    });
+
+    // ===========================
+    // Mobile Menu Functionality
+    // ===========================
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.className = navLinksContainer.classList.contains('active') ? 'ri-close-line' : 'ri-menu-line';
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-links') &&
+            !e.target.closest('.mobile-menu') &&
+            navLinksContainer.classList.contains('active')) {
+            navLinksContainer.classList.remove('active');
+            mobileMenuBtn.querySelector('i').className = 'ri-menu-line';
+        }
+    });
+
+    // ===========================
+    // Theme Switching Functionality
+    // ===========================
+    const themeToggle = document.querySelector('.theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Set initial theme from local storage or system preference
+    const savedTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+
+    // Toggle theme button icon based on theme
+    function updateThemeIcon() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const sunIcon = themeToggle.querySelector('.ri-sun-line');
+        const moonIcon = themeToggle.querySelector('.ri-moon-line');
+
+        if (currentTheme === 'dark') {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'inline';
+        } else {
+            sunIcon.style.display = 'inline';
+            moonIcon.style.display = 'none';
+        }
+    }
+
+    updateThemeIcon();
+    themeToggle.addEventListener('click', updateThemeIcon);
+});
+
+
+        const circles = document.querySelectorAll(".circle:not(.center)");
+    let angle = 0;
+    const speed = 0.01;
+
+    function animate() {
+        angle += speed;
+        let radius = window.innerWidth > 1024 ? 170 : (window.innerWidth > 600 ? 120 : 85);
+
+        circles.forEach((circle, index) => {
+            const offsetAngle = angle + (index * (Math.PI * 2) / circles.length);
+            const x = Math.cos(offsetAngle) * radius;
+            const y = Math.sin(offsetAngle) * radius;
+
+            circle.style.left = `calc(50% + ${x}px - ${circle.offsetWidth / 2}px)`;
+            circle.style.top = `calc(50% + ${y}px - ${circle.offsetHeight / 2}px)`;
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
+</body>
+</html>
